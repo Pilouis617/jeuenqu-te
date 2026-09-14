@@ -1,9 +1,106 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101218"><meta name="description" content="Une enquête narrative dans un navigateur abandonné. Retrouvez Nora en reliant les traces qu’elle a laissées."><title>GhostTab — Les dernières traces</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101218'/%3E%3Cpath d='M9 24V13a7 7 0 0114 0v11l-4-3-3 3-3-3z' fill='%23c4ff73'/%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
-<body><header class="masthead"><a class="brand" href="#" aria-label="GhostTab, accueil">GHOST<span>TAB</span><sup>01</sup></a><div class="case">DOSSIER 001 <span>/ LES DERNIÈRES TRACES</span></div><button id="reset" class="quiet">Recommencer</button></header>
-<main><section class="intro"><div><p class="eyebrow">ENQUÊTE NUMÉRIQUE · 15 MIN</p><h1>Elle a disparu.<br><span>Ses onglets sont restés.</span></h1><p>Nora a laissé son ordinateur ouvert. Explore ses traces, rassemble les indices et retrouve-la avant que la piste ne s’efface.</p></div><div class="status"><span class="pulse"></span> SESSION RESTAURÉE<small>Dernière activité · 23:41</small></div></section>
-<div class="workspace"><section class="browser" aria-label="Navigateur de l’enquête"><div class="window-top"><span class="lights" aria-hidden="true">● ● ●</span><span>Ordinateur de Nora</span><span aria-hidden="true">↗</span></div><nav id="tabs" aria-label="Sites fictifs"></nav><div class="address"><span aria-hidden="true">◈</span><span id="url"></span><span class="offline">SIMULATION LOCALE</span></div><div id="screen" tabindex="-1"></div></section>
-<aside><div class="notebook-head"><p class="eyebrow">TON ENQUÊTE</p><h2>Les pièces du puzzle</h2><p id="progress"></p><div class="meter"><div id="bar"></div></div></div><div id="clues"></div><div class="help"><p>Une piste te résiste ?</p><button id="hint" class="quiet">Révéler un indice ↗</button><p id="hint-text" aria-live="polite"></p></div><p class="save" id="save-status">Progression enregistrée sur cet appareil.</p></aside></div>
-<footer>Une fiction interactive. Aucun site ni message n’est réel.<span>Observe. Relie. Retrouve.</span></footer></main><div id="toast" role="status" aria-live="polite"></div>
-<dialog id="reset-dialog"><h2>Repartir de zéro ?</h2><p>Les indices collectés et les archives déverrouillées seront effacés.</p><div class="actions"><button id="cancel-reset" class="quiet">Continuer l’enquête</button><button id="confirm-reset" class="primary">Recommencer</button></div></dialog>
-</body></html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101218">
+  <meta name="description" content="Une enquête narrative dans un navigateur abandonné. Retrouvez Nora en reliant les traces qu’elle a laissées.">
+
+  <title>GhostTab — Les dernières traces</title>
+
+  <!-- Favicon SVG inline & Assets -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101218'/%3E%3Cpath d='M9 24V13a7 7 0 0114 0v11l-4-3-3 3-3-3z' fill='%23c4ff73'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <!-- EN-TÊTE PRINCIPAL -->
+  <header class="masthead">
+    <a class="brand" href="#" aria-label="GhostTab, accueil">
+      GHOST<span>TAB</span><sup>01</sup>
+    </a>
+    <div class="case">
+      DOSSIER 001 <span>/ LES DERNIÈRES TRACES</span>
+    </div>
+    <button id="reset" class="quiet">Recommencer</button>
+  </header>
+
+  <main>
+    <!-- INTRODUCTION / STATUS -->
+    <section class="intro">
+      <div>
+        <p class="eyebrow">ENQUÊTE NUMÉRIQUE · 15 MIN</p>
+        <h1>Elle a disparu.<br><span>Ses onglets sont restés.</span></h1>
+        <p>Nora a laissé son ordinateur ouvert. Explore ses traces, rassemble les indices et retrouve-la avant que la piste ne s’efface.</p>
+      </div>
+      <div class="status">
+        <span class="pulse"></span> SESSION RESTAURÉE
+        <small>Dernière activité · 23:41</small>
+      </div>
+    </section>
+
+    <!-- ESPACE DE TRAVAIL -->
+    <div class="workspace">
+      <!-- Simulation de l'interface navigateur -->
+      <section class="browser" aria-label="Navigateur de l’enquête">
+        <div class="window-top">
+          <span class="lights" aria-hidden="true">● ● ●</span>
+          <span>Ordinateur de Nora</span>
+          <span aria-hidden="true">↗</span>
+        </div>
+
+        <nav id="tabs" aria-label="Sites fictifs"></nav>
+
+        <div class="address">
+          <span aria-hidden="true">◈</span>
+          <span id="url"></span>
+          <span class="offline">SIMULATION LOCALE</span>
+        </div>
+
+        <div id="screen" tabindex="-1"></div>
+      </section>
+
+      <!-- Panneau latéral / Carnet de bord -->
+      <aside>
+        <div class="notebook-head">
+          <p class="eyebrow">TON ENQUÊTE</p>
+          <h2>Les pièces du puzzle</h2>
+          <p id="progress"></p>
+          <div class="meter">
+            <div id="bar"></div>
+          </div>
+        </div>
+
+        <div id="clues"></div>
+
+        <div class="help">
+          <p>Une piste te résiste ?</p>
+          <button id="hint" class="quiet">Révéler un indice ↗</button>
+          <p id="hint-text" aria-live="polite"></p>
+        </div>
+
+        <p class="save" id="save-status">Progression enregistrée sur cet appareil.</p>
+      </aside>
+    </div>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+      Une fiction interactive. Aucun site ni message n’est réel.
+      <span>Observe. Relie. Retrouve.</span>
+    </footer>
+  </main>
+
+  <!-- OVERLAYS & MODALES -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="reset-dialog">
+    <h2>Repartir de zéro ?</h2>
+    <p>Les indices collectés et les archives déverrouillées seront effacés.</p>
+    <div class="actions">
+      <button id="cancel-reset" class="quiet">Continuer l’enquête</button>
+      <button id="confirm-reset" class="primary">Recommencer</button>
+    </div>
+  </dialog>
+</body>
+</html>
