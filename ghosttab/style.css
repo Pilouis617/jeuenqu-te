@@ -1,1 +1,688 @@
-:root{color-scheme:dark;--bg:#101218;--panel:#181b23;--line:#30343e;--muted:#a6acba;--green:#c4ff73;--text:#f0f1f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6}button,input{font:inherit}button,a,input{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--green);outline-offset:4px}button{border:1px solid var(--line);border-radius:6px;background:#242833;color:var(--text);padding:10px 16px}button:hover{background:#333946}a{color:inherit}.masthead{padding:25px 4vw;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font-size:23px;font-weight:900;letter-spacing:-1px}.brand span{color:var(--green)}sup{font-size:11px;letter-spacing:0;color:var(--muted);margin-left:9px}.case,.eyebrow,.status,.address,.window-top,.save,footer{font-family:monospace}.case{font-size:12px;letter-spacing:1px;color:var(--muted)}.quiet{background:transparent;font-size:14px}.masthead .quiet{border:none}main{max-width:1500px;margin:auto;padding:48px 4vw 20px}.intro{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-bottom:38px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--green);margin:0 0 14px}h1{font-size:clamp(32px,4vw,54px);letter-spacing:-2px;line-height:1.13;margin:0 0 18px}h1 span{color:#9097a8}.intro p:not(.eyebrow){max-width:610px;color:var(--muted);margin-bottom:0}.status{font-size:12px;white-space:nowrap;letter-spacing:1px}.status small{display:block;color:var(--muted);margin:10px 0 0 18px;font-size:12px;letter-spacing:0}.pulse{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:10px;box-shadow:0 0 12px #c4ff7333}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start}.browser{border:1px solid #414652;border-radius:12px;overflow:hidden;background:var(--panel);min-width:0;box-shadow:0 24px 70px #0003}.window-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#a4aab6;padding:12px 18px;background:#222630}.lights{color:#9298a4;letter-spacing:3px;font-size:11px}#tabs{display:flex;overflow:auto;background:#222630;padding:0 10px;gap:3px}#tabs button{background:transparent;border:none;border-radius:8px 8px 0 0;color:#aab0be;white-space:nowrap;font-size:14px;padding:12px 18px}#tabs button.active{background:#303540;color:white;box-shadow:inset 0 2px var(--green)}.address{margin:12px 16px;padding:7px 12px;border:1px solid var(--line);border-radius:5px;font-size:12px;display:flex;gap:12px;color:var(--muted)}#url{flex:1;overflow-wrap:anywhere}.offline{font-size:10px;align-self:center;white-space:nowrap}#screen{min-height:515px;padding:28px 32px 36px;background:#191d25}h2{font-size:23px;letter-spacing:-.6px;line-height:1.25;margin:0 0 16px}h3{font-size:18px;margin:0 0 10px}.site-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px}.site-logo{font-size:21px;font-weight:800}.badge{font-size:12px;color:var(--green);background:#c4ff730b;border:1px solid #c4ff732b;border-radius:4px;padding:4px 9px}.mail-meta{display:flex;gap:12px;align-items:center;margin:22px 0}.avatar{background:#313c32;color:var(--green);width:42px;height:42px;display:grid;place-items:center;border-radius:50%;font-weight:bold}.meta{font-size:13px;color:var(--muted)}.mail-body{border-left:2px solid #484f5d;padding-left:20px;color:#d1d5df}.mail-body p{margin:0 0 18px}.collect{font-size:14px;color:var(--green);border-color:#c4ff7355;background:#c4ff7307;margin-top:8px}.collect:disabled{opacity:.6;cursor:default}.note{font-size:14px;color:var(--muted)}aside{border:1px solid var(--line);border-radius:10px;padding:24px;background:#151820}aside h2{font-size:20px}#progress{font-size:13px;color:var(--muted);margin:0}.meter{height:3px;background:#303641;margin:14px 0 22px}#bar{height:100%;background:var(--green);transition:width .25s}.clue{padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}.clue-num{font:12px monospace;color:#7c8495;margin-top:4px}.clue strong{font-size:14px;font-weight:500}.clue p{margin:4px 0 0;color:var(--muted);font-size:13px}.clue.found .clue-num{color:var(--green)}.help{margin-top:24px}.help>p:first-child{font-size:14px}.help button{width:100%;text-align:left}.help #hint-text{font-size:14px;color:var(--green)}.save{font-size:11px;color:var(--muted);margin-top:26px}.post,.archive-card{padding:20px;background:#212631;border:1px solid #353c48;border-radius:7px;margin:16px 0}.post p{margin:10px 0}.thread-tag{font-size:12px;color:#bdadff}.archive-title{font-family:Georgia,serif;font-size:31px;line-height:1.2}.field{margin:16px 0}.field label{display:block;font-size:14px;margin-bottom:6px}input{width:100%;background:#11151d;border:1px solid #4d5565;border-radius:5px;padding:11px 12px;color:white;min-width:0}form{max-width:470px}.primary{background:var(--green);border-color:var(--green);color:#18210e;font-weight:bold}.primary:hover{background:#d6ffa3}.error{color:#ffb3a7;font-size:14px;min-height:22px}.success{background:#c4ff7309;border:1px solid #c4ff7340;padding:26px;border-radius:8px}.success h2{font-size:30px}.success p{color:#cbd3c3}.stamp{font-family:monospace;letter-spacing:2px;font-size:12px;color:var(--green)}footer{display:flex;justify-content:space-between;gap:20px;margin-top:26px;color:#939bac;font-size:11px}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--green);color:#162109;padding:12px 20px;border-radius:6px;max-width:90vw;box-shadow:0 6px 35px #0005;opacity:0;pointer-events:none;transition:opacity .2s}#toast.show{opacity:1}dialog{max-width:450px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:30px}dialog::backdrop{background:#000a}.actions{display:flex;gap:10px;flex-wrap:wrap}.address span:first-child{color:var(--green)}@media(max-width:1050px){.workspace{grid-template-columns:minmax(0,1fr) 260px}.status{display:none}.case{display:none}#screen{padding:24px}.offline{display:none}}@media(max-width:760px){main{padding:30px 18px}.masthead{padding:18px}.workspace{grid-template-columns:1fr}.intro{margin-bottom:28px}#screen{padding:22px 18px;min-height:450px}#tabs button{padding:12px;font-size:13px}aside{padding:22px}footer span{display:none}.site-head{gap:12px}.badge{white-space:nowrap}h1{letter-spacing:-1px}.archive-title{font-size:27px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ==========================================================================
+   1. VARIABLES & CONFIGURATION SYSTÈME
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* Palette de couleurs */
+  --bg: #101218;
+  --panel: #181b23;
+  --line: #30343e;
+  --muted: #a6acba;
+  --green: #c4ff73;
+  --text: #f0f1f4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. BASE & TYPOGRAPHIE
+   ========================================================================== */
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 54px);
+  letter-spacing: -2px;
+  line-height: 1.13;
+  margin: 0 0 18px;
+}
+
+h1 span {
+  color: #9097a8;
+}
+
+h2 {
+  font-size: 23px;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+a {
+  color: inherit;
+}
+
+/* Typographies à chasse fixe */
+.case,
+.eyebrow,
+.status,
+.address,
+.window-top,
+.save,
+.stamp,
+footer {
+  font-family: monospace;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--green);
+  margin: 0 0 14px;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   3. FORMULAIRES, BOUTONS & ACCESSIBILITÉ
+   ========================================================================== */
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background-color: #242833;
+  color: var(--text);
+  padding: 10px 16px;
+}
+
+button:hover {
+  background-color: #333946;
+}
+
+/* Focus visibles pour l'accessibilité */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}
+
+button.quiet {
+  background: transparent;
+  font-size: 14px;
+}
+
+button.primary {
+  background-color: var(--green);
+  border-color: var(--green);
+  color: #18210e;
+  font-weight: bold;
+}
+
+button.primary:hover {
+  background-color: #d6ffa3;
+}
+
+.field {
+  margin: 16px 0;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  background-color: #11151d;
+  border: 1px solid #4d5565;
+  border-radius: 5px;
+  padding: 11px 12px;
+  color: #ffffff;
+  min-width: 0;
+}
+
+form {
+  max-width: 470px;
+}
+
+/* ==========================================================================
+   4. EN-TÊTE PRINCIPAL (MASTHEAD) & EN-TÊTE DE PAGE
+   ========================================================================== */
+
+.masthead {
+  padding: 25px 4vw;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.masthead .quiet {
+  border: none;
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: var(--green);
+}
+
+sup {
+  font-size: 11px;
+  letter-spacing: 0;
+  color: var(--muted);
+  margin-left: 9px;
+}
+
+.case {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   5. CONTENU PRINCIPAL & INTRODUCTION
+   ========================================================================== */
+
+main {
+  max-width: 1500px;
+  margin: auto;
+  padding: 48px 4vw 20px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 38px;
+}
+
+.intro p:not(.eyebrow) {
+  max-width: 610px;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.status {
+  font-size: 12px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.status small {
+  display: block;
+  color: var(--muted);
+  margin: 10px 0 0 18px;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.pulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--green);
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 0 12px #c4ff7333;
+}
+
+/* ==========================================================================
+   6. ESPACE DE TRAVAIL & COMPOSANT NAVIGATEUR
+   ========================================================================== */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 22px;
+  align-items: start;
+}
+
+.browser {
+  border: 1px solid #414652;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--panel);
+  min-width: 0;
+  box-shadow: 0 24px 70px #00000033;
+}
+
+.window-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #a4aab6;
+  padding: 12px 18px;
+  background-color: #222630;
+}
+
+.lights {
+  color: #9298a4;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+/* Navigation par onglets */
+#tabs {
+  display: flex;
+  overflow-x: auto;
+  background-color: #222630;
+  padding: 0 10px;
+  gap: 3px;
+}
+
+#tabs button {
+  background: transparent;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  color: #aab0be;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 12px 18px;
+}
+
+#tabs button.active {
+  background-color: #303540;
+  color: #ffffff;
+  box-shadow: inset 0 2px var(--green);
+}
+
+/* Barre d'adresse */
+.address {
+  margin: 12px 16px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.address span:first-child {
+  color: var(--green);
+}
+
+#url {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.offline {
+  font-size: 10px;
+  align-self: center;
+  white-space: nowrap;
+}
+
+/* Écran du navigateur */
+#screen {
+  min-height: 515px;
+  padding: 28px 32px 36px;
+  background-color: #191d25;
+}
+
+/* ==========================================================================
+   7. CONTENUS DES VUES (MESSAGES, FORUM, ARCHIVES)
+   ========================================================================== */
+
+.site-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.site-logo {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.badge {
+  font-size: 12px;
+  color: var(--green);
+  background-color: #c4ff730b;
+  border: 1px solid #c4ff732b;
+  border-radius: 4px;
+  padding: 4px 9px;
+}
+
+/* Messagerie */
+.mail-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.avatar {
+  background-color: #313c32;
+  color: var(--green);
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.mail-body {
+  border-left: 2px solid #484f5d;
+  padding-left: 20px;
+  color: #d1d5df;
+}
+
+.mail-body p {
+  margin: 0 0 18px;
+}
+
+/* Actions d'indice */
+.collect {
+  font-size: 14px;
+  color: var(--green);
+  border-color: #c4ff7355;
+  background-color: #c4ff7307;
+  margin-top: 8px;
+}
+
+.collect:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Forum & Archives */
+.post,
+.archive-card {
+  padding: 20px;
+  background-color: #212631;
+  border: 1px solid #353c48;
+  border-radius: 7px;
+  margin: 16px 0;
+}
+
+.post p {
+  margin: 10px 0;
+}
+
+.thread-tag {
+  font-size: 12px;
+  color: #bdadff;
+}
+
+.archive-title {
+  font-family: Georgia, serif;
+  font-size: 31px;
+  line-height: 1.2;
+}
+
+/* Succès et erreurs */
+.error {
+  color: #ffb3a7;
+  font-size: 14px;
+  min-height: 22px;
+}
+
+.success {
+  background-color: #c4ff7309;
+  border: 1px solid #c4ff7340;
+  padding: 26px;
+  border-radius: 8px;
+}
+
+.success h2 {
+  font-size: 30px;
+}
+
+.success p {
+  color: #cbd3c3;
+}
+
+.stamp {
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: var(--green);
+}
+
+/* ==========================================================================
+   8. PANNEAU LATÉRAL (ASIDE / CARNET DE BORD)
+   ========================================================================== */
+
+aside {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  background-color: #151820;
+}
+
+aside h2 {
+  font-size: 20px;
+}
+
+#progress {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.meter {
+  height: 3px;
+  background-color: #303641;
+  margin: 14px 0 22px;
+}
+
+#bar {
+  height: 100%;
+  background-color: var(--green);
+  transition: width 0.25s ease;
+}
+
+.clue {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+}
+
+.clue-num {
+  font: 12px monospace;
+  color: #7c8495;
+  margin-top: 4px;
+}
+
+.clue strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.clue p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.clue.found .clue-num {
+  color: var(--green);
+}
+
+.help {
+  margin-top: 24px;
+}
+
+.help > p:first-child {
+  font-size: 14px;
+}
+
+.help button {
+  width: 100%;
+  text-align: left;
+}
+
+.help #hint-text {
+  font-size: 14px;
+  color: var(--green);
+}
+
+.save {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 26px;
+}
+
+/* ==========================================================================
+   9. PIED DE PAGE & OVERLAYS (TOAST / DIALOG)
+   ========================================================================== */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 26px;
+  color: #939bac;
+  font-size: 11px;
+}
+
+#toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green);
+  color: #162109;
+  padding: 12px 20px;
+  border-radius: 6px;
+  max-width: 90vw;
+  box-shadow: 0 6px 35px #00000055;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+#toast.show {
+  opacity: 1;
+}
+
+dialog {
+  max-width: 450px;
+  background-color: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+dialog::backdrop {
+  background-color: #000000aa;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   10. MEDIA QUERIES (RESPONSIVE & ACCESSIBILITÉ)
+   ========================================================================== */
+
+@media (max-width: 1050px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+
+  .status,
+  .case,
+  .offline {
+    display: none;
+  }
+
+  #screen {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    padding: 30px 18px;
+  }
+
+  .masthead {
+    padding: 18px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    margin-bottom: 28px;
+  }
+
+  #screen {
+    padding: 22px 18px;
+    min-height: 450px;
+  }
+
+  #tabs button {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  aside {
+    padding: 22px;
+  }
+
+  footer span {
+    display: none;
+  }
+
+  .site-head {
+    gap: 12px;
+  }
+
+  .badge {
+    white-space: nowrap;
+  }
+
+  h1 {
+    letter-spacing: -1px;
+  }
+
+  .archive-title {
+    font-size: 27px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
